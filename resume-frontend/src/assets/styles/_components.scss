@@ -1,0 +1,66 @@
+@import 'variables';
+
+.progressBar{
+    &__single {
+      margin-bottom: 40px;
+  
+      &--barLabel {
+        color: #22223B;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1rem;
+        width: 95%;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    
+        &__points{
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 0px
+        }
+        
+        &_label {
+          text-transform: uppercase;
+          opacity: .85;
+          font-size: .95rem;
+          margin-bottom: 0px;
+        }
+      }
+      &--barWrap {
+              height: 7px;
+        width: 100%;
+        background-color: #e0e0de;
+        border-radius: 50px;
+        margin: 0px;
+      }
+    
+    }
+}
+
+.ig-container {
+    .single-ig {
+        .ig-meta-container {
+          padding: 10px 0 0 0;
+            color: $navy;
+        }
+    }
+}
+
+.socialbar{
+        padding-top: 0px;
+        justify-content: center;
+        margin-top: 0px;
+        margin: 0 auto;
+        .social-link {
+            i {
+                @include font-size(18px);
+
+                &.dark {
+                  color: $purple;
+                }
+                &.light {
+                  color: $white;
+                }
+            }
+        }
+    }

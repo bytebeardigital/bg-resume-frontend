@@ -1,0 +1,58 @@
+//COLORS
+$purple:  #81667A;
+$navy: #223851;
+$pink: #F8DCCD;
+$tan: #FFF4EB;
+$black: #000000;
+$white: #ffffff;
+
+
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Source+Sans+Pro:wght@300&display=swap');
+$main: 'Lato', sans-serif;
+$special: 'Source Sans Pro', sans-serif;
+
+//WEIGHTS
+$light: 100;
+$thin: 300;
+$italic: italic;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+
+@mixin for-phone-only {
+    @media (max-width: 599px) and (min-width: 350px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) and (max-width: 999px) { @content; }
+  }
+  @mixin for-desktops {
+    @media (min-width: 1000px) and (max-width: 1500px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1501px) and (max-width: 1800px) { @content; }
+  }
+
+  @function calculate-rem($size) {
+    $rem-size: $size / 16px;
+    @return $rem-size * 1rem;
+  }
+  
+  @mixin font-size($size) {
+    font-size: calculate-rem($size);
+  }
+
+
+  .section-block {
+    margin: 40px auto;
+    @include for-phone-only {
+      margin: 25px auto 25px auto;
+    }
+  }
+
+  .special-container {
+    padding-right: 0px;
+    padding-left: 0px;
+    max-width: 1320px;
+  }

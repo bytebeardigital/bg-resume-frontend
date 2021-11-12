@@ -1,0 +1,82 @@
+@import 'helpers';
+@import 'variables';
+@import 'buttons';
+@import 'components';
+@import 'cards';
+@import 'layouts';
+@import 'resume';
+@import 'portfolio';
+
+
+body,
+html {
+    font-family: $main !important;
+    font-size: 16px !important;
+    line-height: 1px;
+}
+
+h1,
+.h1 {
+  @include h1;
+}
+
+h2,
+.h2 {
+  @include h2;
+}
+
+h3,
+.h3 {
+  @include h3;
+}
+
+h4,
+.h4 {
+  @include h4;
+}
+
+h5,
+.h5 {
+  @include h5;
+}
+
+h6,
+.h6 {
+  @include h6;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 0rem;
+  @include font-size(15px);
+  @include for-phone-only {
+    line-height: 1.5rem;
+  }
+}
+
+
+.page-container {
+  margin: 50px auto 0 auto;
+  @include for-phone-only {
+    margin: 25px auto;
+  }
+}
+
+.about{
+margin-bottom: 50px;
+.aboutme{
+  font-weight: $bold;
+  line-height: 1.75em;
+  @include font-size(24px);
+  @include for-phone-only {
+    @include font-size(18px);
+  }
+
+}
+}
+
+.about{
+  &__page{
+    margin: 50px auto;
+  }
+}

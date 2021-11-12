@@ -1,0 +1,135 @@
+// --------------------------------------------------
+// font size
+
+@function calculate-rem($size) {
+    $rem-size: $size / 16px;
+    @return $rem-size * 1rem;
+  }
+  
+  @mixin font-size($size) {
+    font-size: calculate-rem($size);
+  }
+  
+  @mixin mini-size {
+    @media (min-width: 370px) { @content;}
+  }
+  @mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+  
+  // --------------------------------------------------
+  // heading styles
+  
+  @mixin h1 {
+    //Desktop
+    @include for-desktop-up {
+      @include font-size(89.76px);
+    }
+    //Tablet
+    @include for-tablet-portrait-up {
+      @include font-size(71.80px);
+    }
+    //Phone
+    @include for-phone-only {
+      @include font-size(57.45px);
+      line-height: 3rem;
+    }
+  
+  }
+  
+  @mixin h2 {
+    //Desktop
+    @include for-desktop-up {
+      @include font-size(67.34px);
+    }
+    //Tablet
+    @include for-tablet-portrait-up {
+      @include font-size(53.87px);
+    }
+    //Phone
+    @include for-phone-only {
+      @include font-size(38.1px);
+    }
+  }
+  
+  @mixin h3 {
+      //Desktop
+      @include for-desktop-up {
+        @include font-size(50.52px);
+      }
+      //Tablet
+      @include for-tablet-portrait-up {
+        @include font-size(40.42px);
+      }
+      //Phone
+      @include for-phone-only {
+        @include font-size(32.33px);
+      }
+  }
+  
+  @mixin h4 {
+      //Desktop
+      @include for-desktop-up {
+        @include font-size(37.90px);
+      }
+      //Tablet
+      @include for-tablet-portrait-up {
+        @include font-size(30.32px);
+      }
+      //Phone
+      @include for-phone-only {
+        @include font-size(24.26px);
+      }
+  
+  }
+  
+  @mixin h5 {
+      //Desktop
+      @include for-desktop-up {
+        @include font-size(28.43px);
+      }
+      //Tablet
+      @include for-tablet-portrait-up {
+        @include font-size(19.54px);
+      }
+      //Phone
+      @include for-phone-only {
+        @include font-size(15.63px);
+      }
+  
+  }
+  
+  @mixin h6 {
+      //Desktop
+      @include for-desktop-up {
+        @include font-size(21.33px);
+      }
+      //Tablet
+      @include for-tablet-portrait-up {
+        @include font-size(17.06px);
+      }
+      //Phone
+      @include for-phone-only {
+        @include font-size(13.65px);
+      }
+  }
+  
+  ol {
+    padding-left: 1rem;
+  }
+  
+  a{
+    text-decoration: none !important;
+  }

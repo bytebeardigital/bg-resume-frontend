@@ -1,0 +1,102 @@
+.position__card {
+    margin-bottom: 30px;
+    &--dateRange{
+        font-weight: $regular;
+        margin-bottom: 5px;
+        @include font-size(13px);
+    }
+    &--title{
+        font-weight: $bold;
+        @include font-size(32px);
+        margin-bottom: 0px;
+    }
+    &--company{
+        font-weight: $thin;
+        margin-bottom: 10px;
+        font-style: $italic;
+        @include font-size(19px);
+    }
+    &--summary{
+        line-height: 22px;
+        font-weight: $regular;
+        
+    }
+}
+
+.school__card {
+    margin-bottom: 20px;
+    &--dateRange{
+        font-weight: $regular;
+        margin-bottom: 5px;
+        @include font-size(13px);
+    }
+    &--school{
+        font-weight: $bold;
+        @include font-size(22px);
+        margin-bottom: 5px;
+        line-height: 1rem;
+    }
+    &--degree {
+        font-weight: $thin;
+        font-style: $italic;
+    }
+}
+
+
+.skill {
+&__circle {
+    text-align:  center;
+
+    &--perc {
+        font-weight: $bold;
+        line-height: .95em;
+        @include font-size(26px);
+    }
+
+    &--name {
+        line-height: 0em;
+        @include font-size(13px);
+    }
+
+    &--wrap{
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+}
+
+&__bar {
+    margin-bottom: 20px;
+    @include for-phone-only {
+        margin: 10px;
+    }
+    &--label {
+        color: #22223B;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1rem;
+        width: 95%;
+        margin-left: 10px;
+        margin-bottom: 5px;
+
+        &__points{
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0px !important;
+          }
+          &__name {
+            text-transform: uppercase;
+            opacity: .85;
+            font-size: .95rem;
+            margin-bottom: 0px !important;
+          }
+    }
+    &--barwrap {
+        height: 10px;
+        width: 100%;
+        background-color: #e0e0de;
+        border-radius: 50px;
+        margin: 0px;
+    }
+}
+
+}

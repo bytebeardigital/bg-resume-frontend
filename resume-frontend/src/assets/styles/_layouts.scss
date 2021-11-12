@@ -1,0 +1,167 @@
+
+//HEADER
+.main-nav{
+    display: block !important;
+    margin: 0 auto;
+    text-align: center;
+    @include for-phone-only {
+        display: flex !important;
+        padding: 5px 20px 5px 10px;
+    }
+    .logo {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto 5px auto;
+        @include for-phone-only{
+            display: none;
+        }
+
+    }
+    .branding{
+        justify-content: center;
+        flex-direction: column;
+        @include for-phone-only{
+            flex-direction: row;
+            align-items: center;
+        }
+        &__meta {
+            text-align: center;
+            align-self: center;
+            .author-role {
+                margin-bottom: 5px;
+                font-weight: $thin;
+            }
+            .author-title {
+                @include font-size(16px);
+                font-weight: $thin;
+                $font-style: $italic;
+                position: relative;
+                z-index: 1;
+                padding-left: 5px;
+                margin-bottom: 0px;
+                margin-top: 15px;
+                &:after{
+                    content: '';
+                    position: relative;
+                    display: block;
+                    background-color: $purple;
+                    opacity: 40%;
+                    width: 250px;
+                    height: 30px;
+                    z-index: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    top: -30px;
+                    @include for-phone-only{top: -25px;left: -5px;}
+                  }
+            }
+            @include for-phone-only {
+                align-self: end;
+                text-align: left;
+            }
+        }
+    }
+
+    .toggler {
+        border: none !important;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        @include font-size(26px);
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none;
+        }
+    }
+    .navi{
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+            @include for-phone-only {
+                background-color: $purple;
+                width: 100%;
+            }
+            &__content{
+                        justify-content: space-between;
+                        color: $white;
+                        a {
+                            font-family: $special;
+                            font-weight: $bold;
+                            font-family: $main;
+                            color: #000000;
+                            @include font-size(36.5px);
+                            
+                            @include for-phone-only {
+                                width: 100%;
+                                padding: 1rem;
+                                color: $white;
+                                @include font-size(18px);
+                                letter-spacing: 2px;
+                            }
+                            &:hover{
+                                color: $pink;
+                                transition: all .6s ease-in-out;
+                            }
+                        }
+                @include for-phone-only {
+                    flex-direction: column;
+                    justify-content: center !important;
+                    text-align: center;
+                    flex-direction: column;
+                }
+            }
+        }
+}
+
+//FOOTER
+footer{
+    padding: 50px;
+    background-color: #81667A;
+    color: #ffffff;
+
+    a{
+        color: #fff;
+    }
+    .social-link {
+        i {
+            color: #fff;
+        }
+    }
+    .email {
+        margin-bottom: 0px;
+        &:hover{
+            color: #F8DCCD;
+        }
+    }
+    .mini {
+        font-size: 15px;
+        a {
+            margin-left: 5px;
+        }
+        .moji {
+            font-size: 1.8em;
+            vertical-align: middle;
+        }
+    }
+}
+
+//MINI HEADER
+.heading-block {
+    margin-bottom: 20px;
+    .heading{
+        border: 2px solid $navy;
+        width: 100%;
+        padding: 5px;
+        word-wrap: wrap;
+        display: inline;
+        font-size: 14px;
+        font-family: $main;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: $bold;
+    }
+}
